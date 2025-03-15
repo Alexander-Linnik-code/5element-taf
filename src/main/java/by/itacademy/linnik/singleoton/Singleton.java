@@ -1,4 +1,4 @@
-package by.itacademy.linnik.Singleoton;
+package by.itacademy.linnik.singleoton;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
