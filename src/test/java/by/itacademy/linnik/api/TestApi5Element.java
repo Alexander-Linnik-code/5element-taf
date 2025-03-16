@@ -3,10 +3,13 @@ package by.itacademy.linnik.api;
 import by.itacademy.linnik.pagesapi.Activities;
 import by.itacademy.linnik.pagesapi.Body;
 import io.qameta.allure.Description;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestApi5Element {
     @Test
@@ -44,5 +47,17 @@ public class TestApi5Element {
         softAssertions.assertThat(statusCode).isEqualTo(200);
         softAssertions.assertThat(body).isEqualTo("OK");
         softAssertions.assertAll();
+    }
+
+    @Test
+    @Description("Compare the brand of the requested phone")
+    public void testFirstProductBrandIsSamsung() {
+        String response = Activities.getDoSearch("st=Samsung")
+                .then()
+                .extract()
+                .asString();
+        JsonPath jsonPath = new JsonPath(response);
+        String firstProductBrand = jsonPath.getString("products[0].brand");
+        assertThat(firstProductBrand, equalTo("SAMSUNG"));
     }
 }
