@@ -1,4 +1,4 @@
-package by.itacademy.linnik;
+package by.itacademy.linnik.UI;
 
 import by.itacademy.linnik.pagesui.HomePage;
 import by.itacademy.linnik.singleoton.Singleton;
