@@ -65,6 +65,7 @@ public class CatalogPage {
         }
     }
 
+
     @Step
     public CatalogPage clickAddCart() {
         try {
