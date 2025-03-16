@@ -60,4 +60,16 @@ public class TestApi5Element {
         String firstProductBrand = jsonPath.getString("products[0].brand");
         assertThat(firstProductBrand, equalTo("SAMSUNG"));
     }
+
+    @Test
+    @Description("Compare the price of the first phone on request")
+    public void testFirstProductBrandIsSamsung1() {
+        String response = Activities.getDoSearch("st=Samsung")
+                .then()
+                .extract()
+                .asString();
+        JsonPath jsonPath = new JsonPath(response);
+        String firstProductBrand = jsonPath.getString("products[0].price");
+        assertThat(firstProductBrand, equalTo("1649.0"));
+    }
 }
