@@ -1,5 +1,6 @@
 package by.itacademy.linnik.pagesapi;
 
+
 import java.util.Objects;
 
 public class Body {

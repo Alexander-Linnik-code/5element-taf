@@ -1,9 +1,7 @@
 package by.itacademy.linnik.pagesapi;
 
-import io.opentelemetry.sdk.logs.data.Body;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.given;
 
 public class Activities {
