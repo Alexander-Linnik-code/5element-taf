@@ -19,7 +19,7 @@ public class CartPage {
 
     private final By BUTTON_REMOVE = By.xpath("(//span[text()='Удалить'])[1]");
 
-    private final By TITLE_TEXT_CART_EMPTY = By.className("class='section-heading__title");
+    private final By TITLE_TEXT_CART_EMPTY = By.xpath("//div[@class='section-heading__title']");
 
     @Step
     public CartPage clickRemoveButton(){
