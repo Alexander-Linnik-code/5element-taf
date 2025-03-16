@@ -25,7 +25,7 @@ public class TestApi5Element {
     }
     @Test
     @Description("Negative login form test.")
-    public void testPOST5ElementLogin() {
+    public void testPOST5ElementLoginNegative() {
         Body body1 = new Body("3752565825783");
         Response response = Activities.postDoLogin(body1);
         String body = response.getBody().asString();
@@ -38,7 +38,7 @@ public class TestApi5Element {
 
     @Test
     @Description("Positive login form test.")
-    public void testPOST5ElementLogin2() {
+    public void testPOST5ElementLoginPositive() {
         Body body1 = new Body("375259987926");
         Response response = Activities.postDoLogin(body1);
         String body = response.getBody().asString();
