@@ -32,4 +32,17 @@ public class TestApi5Element {
         softAssertions.assertThat(body).isEqualTo("Введён некорректный номер");
         softAssertions.assertAll();
     }
+
+    @Test
+    @Description("Positive login form test.")
+    public void testPOST5ElementLogin2() {
+        Body body1 = new Body("375259987926");
+        Response response = Activities.postDoLogin(body1);
+        String body = response.getBody().asString();
+        int statusCode = response.getStatusCode();
+        SoftAssertions softAssertions = new SoftAssertions();
+        softAssertions.assertThat(statusCode).isEqualTo(200);
+        softAssertions.assertThat(body).isEqualTo("OK");
+        softAssertions.assertAll();
+    }
 }
