@@ -107,4 +107,10 @@ public class HomePage {
             throw e;
         }
     }
+    @Step
+    public CatalogPage clickSearchAndWriteTextAndClickEnter(String search) {
+        clickSearch();
+        writeText(search);
+        return new CatalogPage();
+    }
 }
