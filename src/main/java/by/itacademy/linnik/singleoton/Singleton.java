@@ -1,5 +1,6 @@
 package by.itacademy.linnik.singleoton;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,5 +29,11 @@ public class Singleton {
             driver.quit();
             driver = null;
         }
+    }
+    public static void clickElement(By element){
+        driver.findElement(element).click();
+    }
+    public static String getTextElement(By element){
+        return driver.findElement(element).getText();
     }
 }

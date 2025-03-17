@@ -46,7 +46,7 @@ public class LoginPage {
     @Step
     public LoginPage clickGetCode() {
         try {
-            driver.findElement(GET_CODE_BUTTON).click();
+            Singleton.clickElement(GET_CODE_BUTTON);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -78,7 +78,7 @@ public class LoginPage {
     @Step
     public LoginPage clickConfirmPhoneButton() {
         try {
-            driver.findElement(CONFIRM_PHONE_BUTTON).click();
+            Singleton.clickElement(CONFIRM_PHONE_BUTTON);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click on phone number verification, but the element was not found.");
@@ -94,7 +94,7 @@ public class LoginPage {
     @Step
     public String gettingErrorText() {
         try {
-            return driver.findElement(TEXT_IS_NOT_CORRECT_CODE).getText();
+            return Singleton.getTextElement(TEXT_IS_NOT_CORRECT_CODE);
         } catch (NoSuchElementException e) {
             logger.info("Trying to extract text, but the element was not found.");
             logger.error("Element not found", e);

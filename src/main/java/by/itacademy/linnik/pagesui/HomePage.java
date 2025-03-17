@@ -46,7 +46,7 @@ public class HomePage {
     @Step
     public HomePage clickEntrance() {
         try {
-            driver.findElement(BUTTON_ACCOUNT).click();
+            Singleton.clickElement(BUTTON_ACCOUNT);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -62,7 +62,7 @@ public class HomePage {
     @Step
     public HomePage clickSearch() {
         try {
-            driver.findElement(SEARCH_BAR).click();
+            Singleton.clickElement(SEARCH_BAR);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -95,7 +95,7 @@ public class HomePage {
     @Step
     public LoginPage clickLoginButton() {
         try {
-            driver.findElement(LOGIN_BUTTON).click();
+            Singleton.clickElement(LOGIN_BUTTON);
             return new LoginPage();
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");

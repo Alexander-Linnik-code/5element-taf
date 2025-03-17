@@ -22,7 +22,7 @@ public class LaptopPage {
     @Step
     public String  getTextModelLaptop(){
         try {
-            return driver.findElement(TITLE_LAPTOP).getText();
+            return Singleton.getTextElement(TITLE_LAPTOP);
         } catch (NoSuchElementException e) {
             logger.info("Trying to extract text, but the element was not found.");
             logger.error("Element not found", e);
