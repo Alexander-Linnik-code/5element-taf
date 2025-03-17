@@ -42,7 +42,7 @@ public class CatalogPage {
 
     @Step
     public LaptopPage clickLaptop() {
-        driver.findElement(BUTTON_LAPTOP).click();
+        Singleton.clickElement(BUTTON_LAPTOP);
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         driver.get("https://5element.by/products/771585-igrovoy-noutbuk-lenovo-ideapad-gaming-3-16iah7-82sa00fb");
@@ -52,7 +52,7 @@ public class CatalogPage {
     @Step
     public CatalogPage clickCookie() {
         try {
-            driver.findElement(BUTTON_COOKIE).click();
+            Singleton.clickElement(BUTTON_COOKIE);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -69,7 +69,7 @@ public class CatalogPage {
     @Step
     public CatalogPage clickAddCart() {
         try {
-            driver.findElement(ADD_CART).click();
+            Singleton.clickElement(ADD_CART);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -85,7 +85,7 @@ public class CatalogPage {
     @Step
     public CartPage clickCart() {
         try {
-            driver.findElement(CLICK_CART).click();
+            Singleton.clickElement(CLICK_CART);
             return new CartPage();
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");

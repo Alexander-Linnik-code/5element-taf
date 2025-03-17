@@ -24,7 +24,7 @@ public class CartPage {
     @Step
     public CartPage clickRemoveButton(){
         try {
-            driver.findElement(BUTTON_REMOVE).click();
+            Singleton.clickElement(BUTTON_REMOVE);
             return this;
         } catch (NoSuchElementException e) {
             logger.info("Attempted to click but element not found.");
@@ -40,7 +40,7 @@ public class CartPage {
     @Step
     public String getTextCartEmpty(){
         try {
-            return driver.findElement(TITLE_TEXT_CART_EMPTY).getText();
+            return Singleton.getTextElement(TITLE_TEXT_CART_EMPTY);
         } catch (NoSuchElementException e) {
             logger.info("Trying to extract text, but the element was not found.");
             logger.error("Element not found", e);
