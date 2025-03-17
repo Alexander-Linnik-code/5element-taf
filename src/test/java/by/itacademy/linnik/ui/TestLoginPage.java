@@ -13,7 +13,7 @@ public class TestLoginPage {
         String actual = new HomePage()
                 .open()
                 .clickLoginButton()
-                .enterPhoneNumber("+375259987927")
+                .enterPhoneNumber("+375258987127")
                 .clickGetCode()
                 .enteringCodeFromSms("1234")
                 .clickConfirmPhoneButton()
