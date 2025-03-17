@@ -22,7 +22,7 @@ public class CartPage {
     private final By TITLE_TEXT_CART_EMPTY = By.xpath("//div[@class='section-heading__title']");
 
     @Step
-    public CartPage clickRemoveButton(){
+    public CartPage clickRemoveButton() {
         try {
             Singleton.clickElement(BUTTON_REMOVE);
             return this;
@@ -38,7 +38,7 @@ public class CartPage {
     }
 
     @Step
-    public String getTextCartEmpty(){
+    public String getTextCartEmpty() {
         try {
             return Singleton.getTextElement(TITLE_TEXT_CART_EMPTY);
         } catch (NoSuchElementException e) {

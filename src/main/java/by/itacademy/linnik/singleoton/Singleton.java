@@ -30,10 +30,12 @@ public class Singleton {
             driver = null;
         }
     }
-    public static void clickElement(By element){
+
+    public static void clickElement(By element) {
         driver.findElement(element).click();
     }
-    public static String getTextElement(By element){
+
+    public static String getTextElement(By element) {
         return driver.findElement(element).getText();
     }
 }

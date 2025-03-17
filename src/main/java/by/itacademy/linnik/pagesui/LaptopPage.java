@@ -20,7 +20,7 @@ public class LaptopPage {
     private final By TITLE_LAPTOP = By.xpath("//h1");
 
     @Step
-    public String  getTextModelLaptop(){
+    public String getTextModelLaptop() {
         try {
             return Singleton.getTextElement(TITLE_LAPTOP);
         } catch (NoSuchElementException e) {

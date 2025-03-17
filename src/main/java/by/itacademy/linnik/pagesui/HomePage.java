@@ -43,21 +43,6 @@ public class HomePage {
         }
     }
 
-    @Step
-    public HomePage clickEntrance() {
-        try {
-            Singleton.clickElement(BUTTON_ACCOUNT);
-            return this;
-        } catch (NoSuchElementException e) {
-            logger.info("Attempted to click but element not found.");
-            logger.error("Element to click not found");
-            throw e;
-        } catch (Exception e) {
-            logger.info("Attempted to click but an error occurred.");
-            logger.error("An error occurred while attempting to click.");
-            throw e;
-        }
-    }
 
     @Step
     public HomePage clickSearch() {
@@ -107,6 +92,7 @@ public class HomePage {
             throw e;
         }
     }
+
     @Step
     public CatalogPage clickSearchAndWriteTextAndClickEnter(String search) {
         clickSearch();
