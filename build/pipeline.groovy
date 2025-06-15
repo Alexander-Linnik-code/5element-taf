@@ -15,6 +15,8 @@ pipeline {
                 bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\HomePage.java"'
                 bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LaptopPage.java"'
                 bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LoginPage.java"'
+                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\Singleton\\Singleton.java"'
+
                 bat 'javac -d . "%WORKSPACE%\\src\\test\\java\\by\\itacademy\\linnik\\ui\\TestCart.java"'
             }
         }
