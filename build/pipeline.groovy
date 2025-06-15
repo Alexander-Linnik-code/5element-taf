@@ -10,13 +10,13 @@ pipeline {
 
          stage('Second hello') {
             steps {
-                echo 'Hello World'
+                sh 'javac ${WORKSPACE}/src/test/java/by/itacademy/linnik/api/TestApi5Element.java'
             }
         }
 
          stage('Third hello') {
             steps {
-                echo 'Hello World'
+                sh 'java ${WORKSPACE}/src/test/java/by/itacademy/linnik/api/TestApi5Element.java'
             }
         }
     }
