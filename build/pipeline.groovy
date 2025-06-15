@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'javac -d . "%WORKSPACE%\\src\\test\\ui\\TestCart.java"'
+                bat 'javac -d . "%WORKSPACE%src\\test\\java\\by\\itacademy\\linnik\\ui\\TestCart.java"'
             }
         }
 
