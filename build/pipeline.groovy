@@ -10,13 +10,13 @@ pipeline {
 
          stage('Build') {
             steps {
-                bat 'javac /src/test/ui/TestCart.java'
+                bat 'javac -d . /src/test/ui/TestCart.java'
             }
         }
 
          stage('Run') {
             steps {
-                bat 'java /src/test/ui/TestCart.java'
+                bat 'java -cp . /src/test/ui/TestCart.java'
             }
         }
     }
