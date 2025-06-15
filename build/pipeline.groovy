@@ -10,13 +10,13 @@ pipeline {
 
          stage('Build') {
             steps {
-                sh 'javac ${WORKSPACE}/src/test/ui/TestCart.java'
+                bat 'javac ${WORKSPACE}/src/test/ui/TestCart.java'
             }
         }
 
          stage('Run') {
             steps {
-                sh 'java ${WORKSPACE}/src/test/ui/TestCart.java'
+                bat 'java ${WORKSPACE}/src/test/ui/TestCart.java'
             }
         }
     }
