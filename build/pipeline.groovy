@@ -8,23 +8,33 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Test Cart') {
             steps {
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\Singleoton\\Singleton.java"'
+               // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\Singleoton\\Singleton.java"'
 
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\CartPage.java"'
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\CatalogPage.java"'
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\HomePage.java"'
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LaptopPage.java"'
-                bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LoginPage.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\CartPage.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\CatalogPage.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\HomePage.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LaptopPage.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\main\\java\\by\\itacademy\\linnik\\pagesui\\LoginPage.java"'
 
-                bat 'javac -d . "%WORKSPACE%\\src\\test\\java\\by\\itacademy\\linnik\\ui\\TestCart.java"'
+                // bat 'javac -d . "%WORKSPACE%\\src\\test\\java\\by\\itacademy\\linnik\\ui\\TestCart.java"'
+
+                // bat 'java -cp . test.ui.TestCart'
+
+                echo 'test cart'
             }
         }
 
-        stage('Run') {
+        stage('Test laptop') {
             steps {
-                bat 'java -cp . test.ui.TestCart'
+                echo 'test laptop'
+            }
+        }
+
+        stage('Test login page') {
+            steps {
+                echo 'test ogin page'
             }
         }
     }
