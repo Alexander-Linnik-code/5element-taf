@@ -8,15 +8,15 @@ pipeline {
             }
         }
 
-         stage('Second hello') {
+         stage('Build') {
             steps {
-                sh 'javac ${WORKSPACE}/src/test/java/by/itacademy/linnik/api/TestApi5Element.java'
+                sh 'javac ${WORKSPACE}/src/test/ui/TestCart.java'
             }
         }
 
-         stage('Third hello') {
+         stage('Run') {
             steps {
-                sh 'java ${WORKSPACE}/src/test/java/by/itacademy/linnik/api/TestApi5Element.java'
+                sh 'java ${WORKSPACE}/src/test/ui/TestCart.java'
             }
         }
     }
