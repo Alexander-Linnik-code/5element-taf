@@ -8,15 +8,15 @@ pipeline {
             }
         }
 
-         stage('Build') {
+        stage('Build') {
             steps {
-                bat 'javac -d . ${WORKSPACE}/src/test/ui/TestCart.java'
+                bat 'javac -d . %WORKSPACE%\\src\\test\\ui\\TestCart.java'
             }
         }
 
-         stage('Run') {
+        stage('Run') {
             steps {
-                bat 'java -cp . ${WORKSPACE}/src/test/ui/TestCart.java'
+                bat 'java -cp . test.ui.TestCart'
             }
         }
     }
