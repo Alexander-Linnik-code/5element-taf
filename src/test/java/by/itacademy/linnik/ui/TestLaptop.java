@@ -1,7 +1,7 @@
 package by.itacademy.linnik.ui;
 
 import by.itacademy.linnik.pagesui.HomePage;
-import by.itacademy.linnik.singleoton.Singleton;
+import by.itacademy.linnik.singleton.Singleton;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

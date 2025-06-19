@@ -1,6 +1,6 @@
 package by.itacademy.linnik.pagesui;
 
-import by.itacademy.linnik.singleoton.Singleton;
+import by.itacademy.linnik.singleton.Singleton;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
