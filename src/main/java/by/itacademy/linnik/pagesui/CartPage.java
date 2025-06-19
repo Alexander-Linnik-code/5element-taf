@@ -1,6 +1,6 @@
 package by.itacademy.linnik.pagesui;
 
-import by.itacademy.linnik.singleoton.Singleton;
+import by.itacademy.linnik.singleton.Singleton;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +19,7 @@ public class CartPage {
 
     private final By BUTTON_REMOVE = By.xpath("(//span[text()='Удалить'])[1]");
 
-    private final By TITLE_TEXT_CART_EMPTY = By.xpath("//div[@class='section-heading__title']");
+    private final By TITLE_TEXT_CART_EMPTY = By.xpath("//*[@id='cart-g-main']/div[1]/div/div/div/div[1]/div");
 
     @Step
     public CartPage clickRemoveButton() {

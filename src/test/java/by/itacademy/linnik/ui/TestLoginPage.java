@@ -1,7 +1,7 @@
 package by.itacademy.linnik.ui;
 
 import by.itacademy.linnik.pagesui.HomePage;
-import by.itacademy.linnik.singleoton.Singleton;
+import by.itacademy.linnik.singleton.Singleton;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ public class TestLoginPage {
         String actual = new HomePage()
                 .open()
                 .clickLoginButton()
-                .enterPhoneNumber("+375258987127")
+                .enterPhoneNumber("+375258917178")
                 .clickGetCode()
                 .enteringCodeFromSms("1234")
                 .clickConfirmPhoneButton()

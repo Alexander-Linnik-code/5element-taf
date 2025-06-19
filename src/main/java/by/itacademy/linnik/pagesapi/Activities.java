@@ -23,7 +23,7 @@ public class Activities {
         Response response =
                 given()
                         .body(body)
-                        .when()
+                .when()
                         .post(URL);
         return response;
     }
